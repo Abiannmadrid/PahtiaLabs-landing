@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-WVWVYF7Y1L');
 </script>
     <meta charset="UTF-8">
@@ -42,6 +41,148 @@
 </head>
 <body class="bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-white">
     
+    <script>
+        const translations = {
+            en: {
+                navAbout: "About",
+                navTools: "Tools",
+                navGetStarted: "Get Started",
+                heroTitle: "Pahtia Labs",
+                heroSubtitle: "Precision pharmacy tools built by IV pharmacy technicians for healthcare professionals",
+                heroExplore: "Explore Tools",
+                heroLearn: "Learn More",
+                toolsTitle: "Our Tools",
+                toolsSubtitle: "Professional-grade calculators designed for IV pharmacy workflows",
+                prepCalcTitle: "PrepCalc",
+                prepCalcSubtitle: "IV Dosing Calculator",
+                prepCalcBadge: "Available Now",
+                prepCalcDesc: "Calculate precise dosing volumes and dilutions for IV preparations. Features dual-mode calculation for both dose-to-volume and concentration-based dilutions.",
+                prepCalcFeature1: "Dose-to-volume calculations",
+                prepCalcFeature2: "Dilution calculations",
+                prepCalcFeature3: "Multiple unit conversions (mg, mcg, g, mmol, mEq)",
+                prepCalcFeature4: "Real-time validation and error checking",
+                prepCalcButton: "Launch PrepCalc →",
+                dripCalcTitle: "Drip Rate Calculator",
+                dripCalcSubtitle: "IV Infusion Rate Tool",
+                dripCalcBadge: "Coming Soon",
+                dripCalcDesc: "Calculate mL/hr pump rates for weight-based and fixed-dose infusions. Perfect for critical care medications.",
+                ctaTitle: "Ready to Get Started?",
+                ctaSubtitle: "Join healthcare professionals using Pahtia Labs tools for precise IV preparations",
+                ctaButton: "Try PrepCalc Now",
+                aboutTitle: "The Meaning Behind Pahtia",
+                aboutPara1: "Pahtia Labs takes its name from the Aztec word pahtia, meaning \"to heal,\" a foundation that guides our purpose. Our focus is to create pharmacy software that elevates safety, enchances accuracy, and strenghthens the clinical work that supports patient care every day.",
+                aboutPara2: "Pahtia Labs bridges traditional pharmacy expertise with cutting-edge technology. Our tools are built by experienced IV pharmacy professionals who understand the critical importance of accuracy in healthcare.",
+                aboutStat1: "100%",
+                aboutStat1Label: "Built for Real-World Use",
+                aboutStat2: "∞",
+                aboutStat2Label: "Commitment to Precision",
+                footerDisclaimer: "Non-clinical demo tools — Always verify calculations before clinical use",
+                footerCopyright: "© 2025 Pahtia Labs — All rights reserved"
+            },
+            es: {
+                navAbout: "Acerca de",
+                navTools: "Herramientas",
+                navGetStarted: "Comenzar",
+                heroTitle: "Pahtia Labs",
+                heroSubtitle: "Herramientas de farmacia de precisión creadas por técnicos de farmacia IV para profesionales de la salud",
+                heroExplore: "Explorar Herramientas",
+                heroLearn: "Más Información",
+                toolsTitle: "Nuestras Herramientas",
+                toolsSubtitle: "Calculadoras de grado profesional diseñadas para flujos de trabajo de farmacia IV",
+                prepCalcTitle: "PrepCalc",
+                prepCalcSubtitle: "Calculadora de Dosificación IV",
+                prepCalcBadge: "Disponible Ahora",
+                prepCalcDesc: "Calcule volúmenes de dosificación precisos y diluciones para preparaciones IV. Incluye cálculo de modo dual para conversiones de dosis a volumen y diluciones basadas en concentración.",
+                prepCalcFeature1: "Cálculos de dosis a volumen",
+                prepCalcFeature2: "Cálculos de dilución",
+                prepCalcFeature3: "Conversiones de múltiples unidades (mg, mcg, g, mmol, mEq)",
+                prepCalcFeature4: "Validación en tiempo real y verificación de errores",
+                prepCalcButton: "Abrir PrepCalc →",
+                dripCalcTitle: "Calculadora de Velocidad de Goteo",
+                dripCalcSubtitle: "Herramienta de Velocidad de Infusión IV",
+                dripCalcBadge: "Próximamente",
+                dripCalcDesc: "Calcule velocidades de bomba en mL/hr para infusiones basadas en peso y dosis fijas. Perfecto para medicamentos de cuidados críticos.",
+                ctaTitle: "¿Listo para Comenzar?",
+                ctaSubtitle: "Únase a los profesionales de la salud que utilizan las herramientas de Pahtia Labs para preparaciones IV precisas",
+                ctaButton: "Probar PrepCalc Ahora",
+                aboutTitle: "El Significado Detrás de Pahtia",
+                aboutPara1: "Pahtia Labs toma su nombre de la palabra azteca pahtia, que significa \"sanar\", una base que guía nuestro propósito. Nuestro enfoque es crear software de farmacia que eleve la seguridad, mejore la precisión y fortalezca el trabajo clínico que apoya la atención al paciente todos los días.",
+                aboutPara2: "Pahtia Labs une la experiencia farmacéutica tradicional con tecnología de vanguardia. Nuestras herramientas son creadas por profesionales experimentados de farmacia IV que comprenden la importancia crítica de la precisión en el cuidado de la salud.",
+                aboutStat1: "100%",
+                aboutStat1Label: "Construido para Uso en el Mundo Real",
+                aboutStat2: "∞",
+                aboutStat2Label: "Compromiso con la Precisión",
+                footerDisclaimer: "Herramientas de demostración no clínicas — Siempre verifique los cálculos antes del uso clínico",
+                footerCopyright: "© 2025 Pahtia Labs — Todos los derechos reservados"
+            }
+        };
+
+        let currentLang = localStorage.getItem('pathia-language') || 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('pathia-language', lang);
+            updateContent();
+            document.getElementById('lang-selector').value = lang;
+        }
+
+        function updateContent() {
+            const t = translations[currentLang];
+            
+            // Navigation
+            document.getElementById('nav-about').textContent = t.navAbout;
+            document.getElementById('nav-tools').textContent = t.navTools;
+            document.getElementById('nav-get-started').textContent = t.navGetStarted;
+            
+            // Hero
+            document.getElementById('hero-title').textContent = t.heroTitle;
+            document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+            document.getElementById('hero-explore').textContent = t.heroExplore;
+            document.getElementById('hero-learn').textContent = t.heroLearn;
+            
+            // Tools Section
+            document.getElementById('tools-title').textContent = t.toolsTitle;
+            document.getElementById('tools-subtitle').textContent = t.toolsSubtitle;
+            document.getElementById('prepcalc-title').textContent = t.prepCalcTitle;
+            document.getElementById('prepcalc-subtitle').textContent = t.prepCalcSubtitle;
+            document.getElementById('prepcalc-badge').textContent = t.prepCalcBadge;
+            document.getElementById('prepcalc-desc').textContent = t.prepCalcDesc;
+            document.getElementById('prepcalc-feature1').textContent = t.prepCalcFeature1;
+            document.getElementById('prepcalc-feature2').textContent = t.prepCalcFeature2;
+            document.getElementById('prepcalc-feature3').textContent = t.prepCalcFeature3;
+            document.getElementById('prepcalc-feature4').textContent = t.prepCalcFeature4;
+            document.getElementById('prepcalc-button').textContent = t.prepCalcButton;
+            
+            document.getElementById('dripcalc-title').textContent = t.dripCalcTitle;
+            document.getElementById('dripcalc-subtitle').textContent = t.dripCalcSubtitle;
+            document.getElementById('dripcalc-badge').textContent = t.dripCalcBadge;
+            document.getElementById('dripcalc-desc').textContent = t.dripCalcDesc;
+            
+            // CTA Section
+            document.getElementById('cta-title').textContent = t.ctaTitle;
+            document.getElementById('cta-subtitle').textContent = t.ctaSubtitle;
+            document.getElementById('cta-button').textContent = t.ctaButton;
+            
+            // About Section
+            document.getElementById('about-title').textContent = t.aboutTitle;
+            document.getElementById('about-para1').innerHTML = t.aboutPara1;
+            document.getElementById('about-para2').textContent = t.aboutPara2;
+            document.getElementById('about-stat1').textContent = t.aboutStat1;
+            document.getElementById('about-stat1-label').textContent = t.aboutStat1Label;
+            document.getElementById('about-stat2').textContent = t.aboutStat2;
+            document.getElementById('about-stat2-label').textContent = t.aboutStat2Label;
+            
+            // Footer
+            document.getElementById('footer-disclaimer').textContent = t.footerDisclaimer;
+            document.getElementById('footer-copyright').textContent = t.footerCopyright;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('lang-selector').value = currentLang;
+            updateContent();
+        });
+    </script>
+    
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
@@ -54,26 +195,11 @@
                                 <stop offset="0%" style="stop-color:#818cf8" />
                                 <stop offset="100%" style="stop-color:#a78bfa" />
                             </linearGradient>
-                            <linearGradient id="aztecGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#3b82f6" />
-                                <stop offset="100%" style="stop-color:#06b6d4" />
-                            </linearGradient>
                         </defs>
                         <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" 
                                  fill="none" stroke="url(#hexGrad)" stroke-width="3"/>
-                        <line x1="50" y1="15" x2="65" y2="23.75" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                        <line x1="80" y1="50" x2="80" y2="67.5" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                        <line x1="80" y1="67.5" x2="65" y2="76.25" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                        <line x1="35" y1="76.25" x2="20" y2="67.5" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                        <line x1="20" y1="67.5" x2="20" y2="50" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                        <line x1="35" y1="23.75" x2="50" y2="15" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                        <circle cx="50" cy="50" r="12" fill="none" stroke="url(#aztecGrad)" stroke-width="2" opacity="0.7"/>
-                        <circle cx="50" cy="50" r="7" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.8"/>
+                        <circle cx="50" cy="50" r="12" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.7"/>
                         <circle cx="50" cy="50" r="3" fill="#3b82f6"/>
-                        <line x1="50" y1="38" x2="50" y2="43" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
-                        <line x1="50" y1="57" x2="50" y2="62" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
-                        <line x1="38" y1="50" x2="43" y2="50" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
-                        <line x1="57" y1="50" x2="62" y2="50" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
                         <circle cx="50" cy="15" r="3" fill="#c4b5fd"/>
                         <circle cx="80" cy="32.5" r="3" fill="#c4b5fd"/>
                         <circle cx="80" cy="67.5" r="3" fill="#c4b5fd"/>
@@ -89,9 +215,13 @@
                 
                 <!-- Nav Links -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a>
-                    <a href="#tools" class="text-gray-300 hover:text-indigo-400 transition">Tools</a>
-                    <a href="#tools" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg transition">Get Started</a>
+                    <a href="#about" id="nav-about" class="text-gray-300 hover:text-indigo-400 transition">About</a>
+                    <a href="#tools" id="nav-tools" class="text-gray-300 hover:text-indigo-400 transition">Tools</a>
+                    <select id="lang-selector" onchange="setLanguage(this.value)" class="bg-gray-800 border border-gray-600 text-white px-3 py-1.5 rounded-lg text-sm">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                    <a href="#tools" id="nav-get-started" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg transition">Get Started</a>
                 </div>
             </div>
         </div>
@@ -107,32 +237,12 @@
                             <stop offset="0%" style="stop-color:#818cf8" />
                             <stop offset="100%" style="stop-color:#a78bfa" />
                         </linearGradient>
-                        <linearGradient id="heroAztecGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#3b82f6" />
-                            <stop offset="100%" style="stop-color:#06b6d4" />
-                        </linearGradient>
                     </defs>
                     <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" 
                              fill="none" stroke="url(#heroHexGrad)" stroke-width="3"/>
-                    <line x1="50" y1="15" x2="65" y2="23.75" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                    <line x1="65" y1="23.75" x2="80" y2="32.5" stroke="#e0e7ff" stroke-width="1.5" opacity="0.5"/>
-                    <line x1="80" y1="32.5" x2="80" y2="50" stroke="#e0e7ff" stroke-width="1.5" opacity="0.5"/>
-                    <line x1="80" y1="50" x2="80" y2="67.5" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                    <line x1="80" y1="67.5" x2="65" y2="76.25" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                    <line x1="65" y1="76.25" x2="50" y2="85" stroke="#e0e7ff" stroke-width="1.5" opacity="0.5"/>
-                    <line x1="50" y1="85" x2="35" y2="76.25" stroke="#e0e7ff" stroke-width="1.5" opacity="0.5"/>
-                    <line x1="35" y1="76.25" x2="20" y2="67.5" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                    <line x1="20" y1="67.5" x2="20" y2="50" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                    <line x1="20" y1="50" x2="20" y2="32.5" stroke="#e0e7ff" stroke-width="1.5" opacity="0.5"/>
-                    <line x1="20" y1="32.5" x2="35" y2="23.75" stroke="#e0e7ff" stroke-width="1.5" opacity="0.5"/>
-                    <line x1="35" y1="23.75" x2="50" y2="15" stroke="#c4b5fd" stroke-width="2" opacity="0.8"/>
-                    <circle cx="50" cy="50" r="12" fill="none" stroke="url(#heroAztecGrad)" stroke-width="2" opacity="0.7"/>
+                    <circle cx="50" cy="50" r="12" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.7"/>
                     <circle cx="50" cy="50" r="7" fill="none" stroke="#60a5fa" stroke-width="1.5" opacity="0.8"/>
                     <circle cx="50" cy="50" r="3" fill="#3b82f6"/>
-                    <line x1="50" y1="38" x2="50" y2="43" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
-                    <line x1="50" y1="57" x2="50" y2="62" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
-                    <line x1="38" y1="50" x2="43" y2="50" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
-                    <line x1="57" y1="50" x2="62" y2="50" stroke="#0ea5e9" stroke-width="2" opacity="0.9"/>
                     <circle cx="50" cy="15" r="3" fill="#c4b5fd" stroke="#818cf8" stroke-width="1"/>
                     <circle cx="80" cy="32.5" r="3" fill="#c4b5fd" stroke="#818cf8" stroke-width="1"/>
                     <circle cx="80" cy="67.5" r="3" fill="#c4b5fd" stroke="#818cf8" stroke-width="1"/>
@@ -143,20 +253,20 @@
             </div>
             
             <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in-up">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                <span id="hero-title" class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
                     Pahtia Labs
                 </span>
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto fade-in-up delay-1">
+            <p id="hero-subtitle" class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto fade-in-up delay-1">
                 Precision pharmacy tools built by IV pharmacy technicians for healthcare professionals
             </p>
               
             <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-3">
-                <a href="#tools" class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
+                <a href="#tools" id="hero-explore" class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
                     Explore Tools
                 </a>
-                <a href="#about" class="border border-indigo-500 hover:bg-indigo-500/10 px-8 py-4 rounded-xl text-lg font-medium transition">
+                <a href="#about" id="hero-learn" class="border border-indigo-500 hover:bg-indigo-500/10 px-8 py-4 rounded-xl text-lg font-medium transition">
                     Learn More
                 </a>
             </div>
@@ -167,11 +277,11 @@
     <section id="tools" class="py-24 px-6 bg-gray-950/50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                <span id="tools-title" class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
                     Our Tools
                 </span>
             </h2>
-            <p class="text-center text-gray-400 mb-16 text-lg">
+            <p id="tools-subtitle" class="text-center text-gray-400 mb-16 text-lg">
                 Professional-grade calculators designed for IV pharmacy workflows
             </p>
             
@@ -180,15 +290,15 @@
                 <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-indigo-500/50 rounded-2xl p-8 hover:border-indigo-400 transition shadow-xl">
                     <div class="flex items-start justify-between mb-6">
                         <div>
-                            <h3 class="text-3xl font-bold text-indigo-300 mb-2">PrepCalc</h3>
-                            <p class="text-gray-400">IV Dosing Calculator</p>
+                            <h3 id="prepcalc-title" class="text-3xl font-bold text-indigo-300 mb-2">PrepCalc</h3>
+                            <p id="prepcalc-subtitle" class="text-gray-400">IV Dosing Calculator</p>
                         </div>
-                        <div class="bg-indigo-600 px-4 py-2 rounded-lg text-sm font-semibold">
+                        <div id="prepcalc-badge" class="bg-indigo-600 px-4 py-2 rounded-lg text-sm font-semibold">
                             Available Now
                         </div>
                     </div>
                     
-                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                    <p id="prepcalc-desc" class="text-gray-300 mb-6 text-lg leading-relaxed">
                         Calculate precise dosing volumes and dilutions for IV preparations. Features dual-mode calculation for both dose-to-volume and concentration-based dilutions.
                     </p>
                     
@@ -197,29 +307,29 @@
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Dose-to-volume calculations</span>
+                            <span id="prepcalc-feature1">Dose-to-volume calculations</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Dilution calculations</span>
+                            <span id="prepcalc-feature2">Dilution calculations</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Multiple unit conversions (mg, mcg, g, mmol, mEq)</span>
+                            <span id="prepcalc-feature3">Multiple unit conversions (mg, mcg, g, mmol, mEq)</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Real-time validation and error checking</span>
+                            <span id="prepcalc-feature4">Real-time validation and error checking</span>
                         </div>
                     </div>
                     
-                    <a href="https://app.pahtialabs.com" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
+                    <a href="https://app.pathialabs.com" id="prepcalc-button" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
                         Launch PrepCalc →
                     </a>
                 </div>
@@ -228,15 +338,15 @@
                 <div class="bg-gray-800/30 border border-gray-700 rounded-2xl p-8 opacity-60">
                     <div class="flex items-start justify-between mb-6">
                         <div>
-                            <h3 class="text-3xl font-bold text-gray-400 mb-2">Drip Rate Calculator</h3>
-                            <p class="text-gray-500">IV Infusion Rate Tool</p>
+                            <h3 id="dripcalc-title" class="text-3xl font-bold text-gray-400 mb-2">Drip Rate Calculator</h3>
+                            <p id="dripcalc-subtitle" class="text-gray-500">IV Infusion Rate Tool</p>
                         </div>
-                        <div class="bg-gray-700 px-4 py-2 rounded-lg text-sm font-semibold text-gray-400">
+                        <div id="dripcalc-badge" class="bg-gray-700 px-4 py-2 rounded-lg text-sm font-semibold text-gray-400">
                             Coming Soon
                         </div>
                     </div>
                     
-                    <p class="text-gray-500 mb-6 text-lg">
+                    <p id="dripcalc-desc" class="text-gray-500 mb-6 text-lg">
                         Calculate mL/hr pump rates for weight-based and fixed-dose infusions. Perfect for critical care medications.
                     </p>
                 </div>
@@ -247,44 +357,44 @@
     <!-- CTA Section -->
     <section class="py-24 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <h2 id="cta-title" class="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Get Started?
             </h2>
-            <p class="text-xl text-gray-300 mb-10">
+            <p id="cta-subtitle" class="text-xl text-gray-300 mb-10">
                 Join healthcare professionals using Pahtia Labs tools for precise IV preparations
             </p>
-            <a href="#tools" class="inline-block bg-indigo-600 hover:bg-indigo-700 px-10 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
+            <a href="#tools" id="cta-button" class="inline-block bg-indigo-600 hover:bg-indigo-700 px-10 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
                 Try PrepCalc Now
             </a>
         </div>
     </section>
 
-    <!-- About Section (Moved to Bottom) -->
+    <!-- About Section -->
     <section id="about" class="py-24 px-6 bg-gray-950/50">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                <span id="about-title" class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
                     The Meaning Behind Pahtia
                 </span>
             </h2>
             
             <div class="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 md:p-12">
-                <p class="text-xl text-gray-300 leading-relaxed mb-6">
+                <p id="about-para1" class="text-xl text-gray-300 leading-relaxed mb-6">
                     <span class="text-indigo-400 font-semibold">Pahtia Labs</span> takes its name from the Aztec word <span class="text-indigo-300 italic">pahtia</span>, meaning "to heal," a foundation that guides our purpose. Our focus is to create pharmacy software that elevates safety, enchances accuracy, and strenghthens the clinical work that supports patient care every day.
                 </p>
                 
-                <p class="text-xl text-gray-300 leading-relaxed mb-6">
+                <p id="about-para2" class="text-xl text-gray-300 leading-relaxed mb-6">
                     Pahtia Labs bridges traditional pharmacy expertise with cutting-edge technology. Our tools are built by experienced IV pharmacy professionals who understand the critical importance of accuracy in healthcare.
                 </p>
                 
                 <div class="flex items-center justify-center gap-12 mt-12 flex-wrap">
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-indigo-400 mb-2">100%</div>
-                        <div class="text-gray-400">Built for Real-World Use</div>
+                        <div id="about-stat1" class="text-4xl font-bold text-indigo-400 mb-2">100%</div>
+                        <div id="about-stat1-label" class="text-gray-400">Built for Real-World Use</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-indigo-400 mb-2">∞</div>
-                        <div class="text-gray-400">Commitment to Precision</div>
+                        <div id="about-stat2" class="text-4xl font-bold text-indigo-400 mb-2">∞</div>
+                        <div id="about-stat2-label" class="text-gray-400">Commitment to Precision</div>
                     </div>
                 </div>
             </div>
@@ -315,10 +425,10 @@
                 </div>
                 
                 <div class="text-center md:text-right">
-                    <p class="text-gray-400 text-sm mb-2">
+                    <p id="footer-disclaimer" class="text-gray-400 text-sm mb-2">
                         Non-clinical demo tools — Always verify calculations before clinical use
                     </p>
-                    <p class="text-gray-500 text-sm">
+                    <p id="footer-copyright" class="text-gray-500 text-sm">
                         © 2025 Pahtia Labs — All rights reserved
                     </p>
                 </div>
