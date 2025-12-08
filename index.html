@@ -258,6 +258,78 @@
                 aboutStat2Label: "精度へのコミットメント",
                 footerDisclaimer: "非臨床デモツール — 臨床使用前に常に計算を確認してください",
                 footerCopyright: "© 2025 Pahtia Labs — 無断転載を禁じます"
+            },
+            it: {
+                navAbout: "Chi Siamo",
+                navTools: "Strumenti",
+                navGetStarted: "Inizia",
+                heroTitle: "Pahtia Labs",
+                heroSubtitle: "Strumenti farmaceutici di precisione creati da tecnici di farmacia IV per professionisti sanitari",
+                heroExplore: "Esplora Strumenti",
+                heroLearn: "Scopri di Più",
+                toolsTitle: "I Nostri Strumenti",
+                toolsSubtitle: "Calcolatori di livello professionale progettati per i flussi di lavoro della farmacia IV",
+                prepCalcTitle: "PrepCalc",
+                prepCalcSubtitle: "Calcolatore di Dosaggio IV",
+                prepCalcBadge: "Disponibile Ora",
+                prepCalcDesc: "Calcola volumi di dosaggio precisi e diluizioni per preparazioni IV. Include calcolo in modalità doppia per conversioni dose-volume e diluizioni basate sulla concentrazione.",
+                prepCalcFeature1: "Calcoli dose-volume",
+                prepCalcFeature2: "Calcoli di diluizione",
+                prepCalcFeature3: "Conversioni di unità multiple (mg, mcg, g, mmol, mEq)",
+                prepCalcFeature4: "Validazione in tempo reale e controllo errori",
+                prepCalcButton: "Avvia PrepCalc →",
+                dripCalcTitle: "Calcolatore Velocità di Infusione",
+                dripCalcSubtitle: "Strumento Velocità Infusione IV",
+                dripCalcBadge: "Prossimamente",
+                dripCalcDesc: "Calcola velocità pompa in mL/h per infusioni basate sul peso e dosi fisse. Perfetto per farmaci di terapia intensiva.",
+                ctaTitle: "Pronto per Iniziare?",
+                ctaSubtitle: "Unisciti ai professionisti sanitari che utilizzano gli strumenti Pahtia Labs per preparazioni IV precise",
+                ctaButton: "Prova PrepCalc Ora",
+                aboutTitle: "Il Significato di Pahtia",
+                aboutPara1: "Pahtia Labs prende il nome dalla parola azteca pahtia, che significa \"guarire\", una base che guida il nostro scopo. Il nostro obiettivo è creare software farmaceutico che migliori la sicurezza, aumenti la precisione e rafforzi il lavoro clinico che supporta l'assistenza ai pazienti ogni giorno.",
+                aboutPara2: "Pahtia Labs unisce l'esperienza farmaceutica tradizionale con la tecnologia all'avanguardia. I nostri strumenti sono creati da professionisti esperti di farmacia IV che comprendono l'importanza critica della precisione nell'assistenza sanitaria.",
+                aboutStat1: "100%",
+                aboutStat1Label: "Costruito per l'Uso nel Mondo Reale",
+                aboutStat2: "∞",
+                aboutStat2Label: "Impegno per la Precisione",
+                footerDisclaimer: "Strumenti demo non clinici — Verifica sempre i calcoli prima dell'uso clinico",
+                footerCopyright: "© 2025 Pahtia Labs — Tutti i diritti riservati"
+            },
+            zh: {
+                navAbout: "关于",
+                navTools: "工具",
+                navGetStarted: "开始使用",
+                heroTitle: "Pahtia Labs",
+                heroSubtitle: "由静脉药房技术人员为医疗专业人员打造的精密药房工具",
+                heroExplore: "探索工具",
+                heroLearn: "了解更多",
+                toolsTitle: "我们的工具",
+                toolsSubtitle: "为静脉药房工作流程设计的专业级计算器",
+                prepCalcTitle: "PrepCalc",
+                prepCalcSubtitle: "静脉给药计算器",
+                prepCalcBadge: "现已推出",
+                prepCalcDesc: "计算静脉制剂的精确剂量体积和稀释。具有双模式计算功能，用于剂量到体积转换和基于浓度的稀释。",
+                prepCalcFeature1: "剂量到体积计算",
+                prepCalcFeature2: "稀释计算",
+                prepCalcFeature3: "多单位转换（毫克、微克、克、毫摩尔、毫当量）",
+                prepCalcFeature4: "实时验证和错误检查",
+                prepCalcButton: "启动PrepCalc →",
+                dripCalcTitle: "滴速计算器",
+                dripCalcSubtitle: "静脉输注速率工具",
+                dripCalcBadge: "即将推出",
+                dripCalcDesc: "计算基于体重和固定剂量输注的毫升/小时泵速。非常适合重症监护药物。",
+                ctaTitle: "准备开始了吗？",
+                ctaSubtitle: "加入使用Pahtia Labs工具进行精确静脉制剂的医疗专业人员",
+                ctaButton: "立即试用PrepCalc",
+                aboutTitle: "Pahtia背后的意义",
+                aboutPara1: "Pahtia Labs的名字来源于阿兹特克语pahtia，意思是\"治愈\"，这是指导我们目标的基础。我们的重点是创建提高安全性、增强准确性并加强每天支持患者护理的临床工作的药房软件。",
+                aboutPara2: "Pahtia Labs将传统药房专业知识与尖端技术相结合。我们的工具由经验丰富的静脉药房专业人员构建，他们了解医疗保健中准确性的关键重要性。",
+                aboutStat1: "100%",
+                aboutStat1Label: "为实际使用而构建",
+                aboutStat2: "∞",
+                aboutStat2Label: "对精确度的承诺",
+                footerDisclaimer: "非临床演示工具 — 在临床使用前请务必验证计算",
+                footerCopyright: "© 2025 Pahtia Labs — 保留所有权利"
             }
         };
 
@@ -265,7 +337,7 @@
 
         function setLanguage(lang) {
             currentLang = lang;
-            localStorage.setItem('pahtia-language', lang);
+            localStorage.setItem('pathia-language', lang);
             updateContent();
             document.getElementById('lang-selector').value = lang;
         }
@@ -368,6 +440,8 @@
                         <option value="pt">Português</option>
                         <option value="de">Deutsch</option>
                         <option value="ja">日本語</option>
+                        <option value="it">Italiano</option>
+                        <option value="zh">中文</option>
                     </select>
                     <a href="#tools" id="nav-get-started" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg transition">Get Started</a>
                 </div>
