@@ -61,6 +61,7 @@
                 prepCalcFeature2: "Dilution calculations",
                 prepCalcFeature3: "Multiple unit conversions (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Real-time validation and error checking",
+                prepCalcFeature5: "Free Unlimited Access",
                 prepCalcButton: "Launch PrepCalc →",
                 dripCalcTitle: "Drip Rate Calculator",
                 dripCalcSubtitle: "IV Infusion Rate Tool",
@@ -97,6 +98,7 @@
                 prepCalcFeature2: "Cálculos de dilución",
                 prepCalcFeature3: "Conversiones de múltiples unidades (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Validación en tiempo real y verificación de errores",
+                prepCalcFeature5: "Acceso Ilimitado Gratuito",
                 prepCalcButton: "Abrir PrepCalc →",
                 dripCalcTitle: "Calculadora de Velocidad de Goteo",
                 dripCalcSubtitle: "Herramienta de Velocidad de Infusión IV",
@@ -133,6 +135,7 @@
                 prepCalcFeature2: "Calculs de dilution",
                 prepCalcFeature3: "Conversions d'unités multiples (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Validation en temps réel et vérification des erreurs",
+                prepCalcFeature5: "Accès Illimité Gratuit",
                 prepCalcButton: "Lancer PrepCalc →",
                 dripCalcTitle: "Calculateur de Débit de Perfusion",
                 dripCalcSubtitle: "Outil de Débit de Perfusion IV",
@@ -169,6 +172,7 @@
                 prepCalcFeature2: "Cálculos de diluição",
                 prepCalcFeature3: "Conversões de múltiplas unidades (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Validação em tempo real e verificação de erros",
+                prepCalcFeature5: "Acesso Ilimitado Gratuito",
                 prepCalcButton: "Abrir PrepCalc →",
                 dripCalcTitle: "Calculadora de Taxa de Gotejamento",
                 dripCalcSubtitle: "Ferramenta de Taxa de Infusão IV",
@@ -205,6 +209,7 @@
                 prepCalcFeature2: "Verdünnungsberechnungen",
                 prepCalcFeature3: "Multiple Einheitenumrechnungen (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Echtzeitvalidierung und Fehlerprüfung",
+                prepCalcFeature5: "Kostenloser Unbegrenzter Zugang",
                 prepCalcButton: "PrepCalc Starten →",
                 dripCalcTitle: "Tropfgeschwindigkeitsrechner",
                 dripCalcSubtitle: "IV-Infusionsraten-Tool",
@@ -241,6 +246,7 @@
                 prepCalcFeature2: "希釈計算",
                 prepCalcFeature3: "複数の単位変換（mg、mcg、g、mmol、mEq）",
                 prepCalcFeature4: "リアルタイム検証とエラーチェック",
+                prepCalcFeature5: "無料無制限アクセス",
                 prepCalcButton: "PrepCalcを起動 →",
                 dripCalcTitle: "点滴速度計算機",
                 dripCalcSubtitle: "IV注入速度ツール",
@@ -277,6 +283,7 @@
                 prepCalcFeature2: "Calcoli di diluizione",
                 prepCalcFeature3: "Conversioni di unità multiple (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Validazione in tempo reale e controllo errori",
+                prepCalcFeature5: "Accesso Illimitato Gratuito",
                 prepCalcButton: "Avvia PrepCalc →",
                 dripCalcTitle: "Calcolatore Velocità di Infusione",
                 dripCalcSubtitle: "Strumento Velocità Infusione IV",
@@ -313,6 +320,7 @@
                 prepCalcFeature2: "稀释计算",
                 prepCalcFeature3: "多单位转换（毫克、微克、克、毫摩尔、毫当量）",
                 prepCalcFeature4: "实时验证和错误检查",
+                prepCalcFeature5: "免费无限访问",
                 prepCalcButton: "启动PrepCalc →",
                 dripCalcTitle: "滴速计算器",
                 dripCalcSubtitle: "静脉输注速率工具",
@@ -349,6 +357,7 @@
                 prepCalcFeature2: "희석 계산",
                 prepCalcFeature3: "다중 단위 변환 (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "실시간 검증 및 오류 확인",
+                prepCalcFeature5: "무료 무제한 액세스",
                 prepCalcButton: "PrepCalc 실행 →",
                 dripCalcTitle: "점적 속도 계산기",
                 dripCalcSubtitle: "IV 주입 속도 도구",
@@ -385,6 +394,7 @@
                 prepCalcFeature2: "Obliczenia rozcieńczenia",
                 prepCalcFeature3: "Konwersje wielu jednostek (mg, mcg, g, mmol, mEq)",
                 prepCalcFeature4: "Walidacja w czasie rzeczywistym i sprawdzanie błędów",
+                prepCalcFeature5: "Darmowy Nieograniczony Dostęp",
                 prepCalcButton: "Uruchom PrepCalc →",
                 dripCalcTitle: "Kalkulator Prędkości Wlewu",
                 dripCalcSubtitle: "Narzędzie Prędkości Infuzji IV",
@@ -439,6 +449,7 @@
             document.getElementById('prepcalc-feature2').textContent = t.prepCalcFeature2;
             document.getElementById('prepcalc-feature3').textContent = t.prepCalcFeature3;
             document.getElementById('prepcalc-feature4').textContent = t.prepCalcFeature4;
+            document.getElementById('prepcalc-feature5').textContent = t.prepCalcFeature5;
             document.getElementById('prepcalc-button').textContent = t.prepCalcButton;
             
             document.getElementById('dripcalc-title').textContent = t.dripCalcTitle;
@@ -603,19 +614,13 @@
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span id="prepcalc-feature1">Free Unlimited Access</span>
+                            <span id="prepcalc-feature1">Dose-to-volume calculations</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature2">Dilution calculations</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-gray-300">
-                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span id="prepcalc-feature2">Dose-to-volume calculation</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
                             <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -628,6 +633,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature4">Real-time validation and error checking</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span id="prepcalc-feature5">Free Unlimited Access</span>
                         </div>
                     </div>
                     
