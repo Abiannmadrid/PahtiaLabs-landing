@@ -2,485 +2,28 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWVYF7Y1L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-WVWVYF7Y1L');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWVYF7Y1L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WVWVYF7Y1L');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pahtia Labs - Precision pharmacy tools built by IV pharmacy technicians for healthcare professionals">
+    <meta name="keywords" content="pharmacy calculator, IV dosing, drug dilution, pharmacy tools, healthcare">
+    
     <title>Pahtia Labs - Precision Pharmacy Tools</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .delay-1 { animation-delay: 0.2s; opacity: 0; }
-        .delay-2 { animation-delay: 0.4s; opacity: 0; }
-        .delay-3 { animation-delay: 0.6s; opacity: 0; }
-    </style>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 text-white">
-    
-    <script>
-        const translations = {
-            en: {
-                navAbout: "About",
-                navTools: "Tools",
-                navGetStarted: "Get Started",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Precision pharmacy tools built by IV pharmacy technicians for healthcare professionals",
-                heroExplore: "Explore Tools",
-                heroLearn: "Learn More",
-                toolsTitle: "Our Tools",
-                toolsSubtitle: "Professional-grade calculators designed for IV pharmacy workflows",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "IV Dosing Calculator",
-                prepCalcBadge: "Available Now",
-                prepCalcDesc: "Calculate precise dosing volumes and dilutions for IV preparations. Features dual-mode calculation for both dose-to-volume and concentration-based dilutions.",
-                prepCalcFeature1: "Dose-to-volume calculations",
-                prepCalcFeature2: "Dilution calculations",
-                prepCalcFeature3: "Multiple unit conversions (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Real-time validation and error checking",
-                prepCalcFeature5: "Free Unlimited Access",
-                prepCalcButton: "Launch PrepCalc →",
-                dripCalcTitle: "Drip Rate Calculator",
-                dripCalcSubtitle: "IV Infusion Rate Tool",
-                dripCalcBadge: "Coming Soon",
-                dripCalcDesc: "Calculate mL/hr pump rates for weight-based and fixed-dose infusions. Perfect for critical care medications.",
-                ctaTitle: "Ready to Get Started?",
-                ctaSubtitle: "Join healthcare professionals using Pahtia Labs tools for precise IV preparations",
-                ctaButton: "Try PrepCalc Now",
-                aboutTitle: "The Meaning Behind Pahtia",
-                aboutPara1: "Pahtia Labs takes its name from the Aztec word pahtia, meaning \"to heal,\" a foundation that guides our purpose. Our focus is to create pharmacy software that elevates safety, enchances accuracy, and strenghthens the clinical work that supports patient care every day.",
-                aboutPara2: "Pahtia Labs bridges traditional pharmacy expertise with cutting-edge technology. Our tools are built by experienced IV pharmacy professionals who understand the critical importance of accuracy in healthcare.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Built for Real-World Use",
-                aboutStat2: "∞",
-                aboutStat2Label: "Commitment to Precision",
-                footerDisclaimer: "Non-clinical demo tools — Always verify calculations before clinical use",
-                footerCopyright: "© 2025 Pahtia Labs — All rights reserved"
-            },
-            es: {
-                navAbout: "Acerca de",
-                navTools: "Herramientas",
-                navGetStarted: "Comenzar",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Herramientas de farmacia de precisión creadas por técnicos de farmacia IV para profesionales de la salud",
-                heroExplore: "Explorar Herramientas",
-                heroLearn: "Más Información",
-                toolsTitle: "Nuestras Herramientas",
-                toolsSubtitle: "Calculadoras de grado profesional diseñadas para flujos de trabajo de farmacia IV",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "Calculadora de Dosificación IV",
-                prepCalcBadge: "Disponible Ahora",
-                prepCalcDesc: "Calcule volúmenes de dosificación precisos y diluciones para preparaciones IV. Incluye cálculo de modo dual para conversiones de dosis a volumen y diluciones basadas en concentración.",
-                prepCalcFeature1: "Cálculos de dosis a volumen",
-                prepCalcFeature2: "Cálculos de dilución",
-                prepCalcFeature3: "Conversiones de múltiples unidades (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Validación en tiempo real y verificación de errores",
-                prepCalcFeature5: "Acceso Ilimitado Gratuito",
-                prepCalcButton: "Abrir PrepCalc →",
-                dripCalcTitle: "Calculadora de Velocidad de Goteo",
-                dripCalcSubtitle: "Herramienta de Velocidad de Infusión IV",
-                dripCalcBadge: "Próximamente",
-                dripCalcDesc: "Calcule velocidades de bomba en mL/hr para infusiones basadas en peso y dosis fijas. Perfecto para medicamentos de cuidados críticos.",
-                ctaTitle: "¿Listo para Comenzar?",
-                ctaSubtitle: "Únase a los profesionales de la salud que utilizan las herramientas de Pahtia Labs para preparaciones IV precisas",
-                ctaButton: "Probar PrepCalc Ahora",
-                aboutTitle: "El Significado Detrás de Pahtia",
-                aboutPara1: "Pahtia Labs toma su nombre de la palabra azteca pahtia, que significa \"sanar\", una base que guía nuestro propósito. Nuestro enfoque es crear software de farmacia que eleve la seguridad, mejore la precisión y fortalezca el trabajo clínico que apoya la atención al paciente todos los días.",
-                aboutPara2: "Pahtia Labs une la experiencia farmacéutica tradicional con tecnología de vanguardia. Nuestras herramientas son creadas por profesionales experimentados de farmacia IV que comprenden la importancia crítica de la precisión en el cuidado de la salud.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Construido para Uso en el Mundo Real",
-                aboutStat2: "∞",
-                aboutStat2Label: "Compromiso con la Precisión",
-                footerDisclaimer: "Herramientas de demostración no clínicas — Siempre verifique los cálculos antes del uso clínico",
-                footerCopyright: "© 2025 Pahtia Labs — Todos los derechos reservados"
-            },
-            fr: {
-                navAbout: "À propos",
-                navTools: "Outils",
-                navGetStarted: "Commencer",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Outils pharmaceutiques de précision créés par des techniciens en pharmacie IV pour les professionnels de la santé",
-                heroExplore: "Explorer les Outils",
-                heroLearn: "En Savoir Plus",
-                toolsTitle: "Nos Outils",
-                toolsSubtitle: "Calculateurs de qualité professionnelle conçus pour les flux de travail de pharmacie IV",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "Calculateur de Dosage IV",
-                prepCalcBadge: "Disponible Maintenant",
-                prepCalcDesc: "Calculez les volumes de dosage précis et les dilutions pour les préparations IV. Comprend un calcul en mode double pour les conversions dose-volume et les dilutions basées sur la concentration.",
-                prepCalcFeature1: "Calculs dose-volume",
-                prepCalcFeature2: "Calculs de dilution",
-                prepCalcFeature3: "Conversions d'unités multiples (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Validation en temps réel et vérification des erreurs",
-                prepCalcFeature5: "Accès Illimité Gratuit",
-                prepCalcButton: "Lancer PrepCalc →",
-                dripCalcTitle: "Calculateur de Débit de Perfusion",
-                dripCalcSubtitle: "Outil de Débit de Perfusion IV",
-                dripCalcBadge: "Bientôt Disponible",
-                dripCalcDesc: "Calculez les débits de pompe en mL/h pour les perfusions basées sur le poids et les doses fixes. Parfait pour les médicaments de soins intensifs.",
-                ctaTitle: "Prêt à Commencer?",
-                ctaSubtitle: "Rejoignez les professionnels de la santé utilisant les outils Pahtia Labs pour des préparations IV précises",
-                ctaButton: "Essayer PrepCalc Maintenant",
-                aboutTitle: "La Signification de Pahtia",
-                aboutPara1: "Pahtia Labs tire son nom du mot aztèque pahtia, signifiant \"guérir\", une base qui guide notre objectif. Notre mission est de créer des logiciels pharmaceutiques qui améliorent la sécurité, renforcent la précision et soutiennent le travail clinique au service des soins aux patients chaque jour.",
-                aboutPara2: "Pahtia Labs associe l'expertise pharmaceutique traditionnelle à une technologie de pointe. Nos outils sont créés par des professionnels expérimentés en pharmacie IV qui comprennent l'importance cruciale de la précision dans les soins de santé.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Conçu pour une Utilisation Réelle",
-                aboutStat2: "∞",
-                aboutStat2Label: "Engagement envers la Précision",
-                footerDisclaimer: "Outils de démonstration non cliniques — Vérifiez toujours les calculs avant utilisation clinique",
-                footerCopyright: "© 2025 Pahtia Labs — Tous droits réservés"
-            },
-            pt: {
-                navAbout: "Sobre",
-                navTools: "Ferramentas",
-                navGetStarted: "Começar",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Ferramentas farmacêuticas de precisão criadas por técnicos de farmácia IV para profissionais de saúde",
-                heroExplore: "Explorar Ferramentas",
-                heroLearn: "Saiba Mais",
-                toolsTitle: "Nossas Ferramentas",
-                toolsSubtitle: "Calculadoras de nível profissional projetadas para fluxos de trabalho de farmácia IV",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "Calculadora de Dosagem IV",
-                prepCalcBadge: "Disponível Agora",
-                prepCalcDesc: "Calcule volumes de dosagem precisos e diluições para preparações IV. Inclui cálculo de modo duplo para conversões de dose para volume e diluições baseadas em concentração.",
-                prepCalcFeature1: "Cálculos de dose para volume",
-                prepCalcFeature2: "Cálculos de diluição",
-                prepCalcFeature3: "Conversões de múltiplas unidades (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Validação em tempo real e verificação de erros",
-                prepCalcFeature5: "Acesso Ilimitado Gratuito",
-                prepCalcButton: "Abrir PrepCalc →",
-                dripCalcTitle: "Calculadora de Taxa de Gotejamento",
-                dripCalcSubtitle: "Ferramenta de Taxa de Infusão IV",
-                dripCalcBadge: "Em Breve",
-                dripCalcDesc: "Calcule taxas de bomba em mL/h para infusões baseadas em peso e doses fixas. Perfeito para medicamentos de cuidados intensivos.",
-                ctaTitle: "Pronto para Começar?",
-                ctaSubtitle: "Junte-se aos profissionais de saúde usando as ferramentas Pahtia Labs para preparações IV precisas",
-                ctaButton: "Experimentar PrepCalc Agora",
-                aboutTitle: "O Significado por Trás de Pahtia",
-                aboutPara1: "Pahtia Labs recebe seu nome da palavra asteca pahtia, que significa \"curar\", uma base que orienta nosso propósito. Nosso foco é criar software farmacêutico que eleve a segurança, aprimore a precisão e fortaleça o trabalho clínico que apoia o cuidado ao paciente todos os dias.",
-                aboutPara2: "Pahtia Labs une a experiência farmacêutica tradicional com tecnologia de ponta. Nossas ferramentas são criadas por profissionais experientes de farmácia IV que entendem a importância crítica da precisão nos cuidados de saúde.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Construído para Uso no Mundo Real",
-                aboutStat2: "∞",
-                aboutStat2Label: "Compromisso com a Precisão",
-                footerDisclaimer: "Ferramentas de demonstração não clínicas — Sempre verifique os cálculos antes do uso clínico",
-                footerCopyright: "© 2025 Pahtia Labs — Todos os direitos reservados"
-            },
-            de: {
-                navAbout: "Über uns",
-                navTools: "Tools",
-                navGetStarted: "Loslegen",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Präzisions-Pharmazie-Tools, entwickelt von IV-Pharmazie-Technikern für medizinisches Fachpersonal",
-                heroExplore: "Tools Erkunden",
-                heroLearn: "Mehr Erfahren",
-                toolsTitle: "Unsere Tools",
-                toolsSubtitle: "Professionelle Rechner für IV-Pharmazie-Workflows",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "IV-Dosierungsrechner",
-                prepCalcBadge: "Jetzt Verfügbar",
-                prepCalcDesc: "Berechnen Sie präzise Dosierungsvolumina und Verdünnungen für IV-Zubereitungen. Bietet Dual-Modus-Berechnung für Dosis-zu-Volumen- und konzentrationsbasierte Verdünnungen.",
-                prepCalcFeature1: "Dosis-zu-Volumen-Berechnungen",
-                prepCalcFeature2: "Verdünnungsberechnungen",
-                prepCalcFeature3: "Multiple Einheitenumrechnungen (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Echtzeitvalidierung und Fehlerprüfung",
-                prepCalcFeature5: "Kostenloser Unbegrenzter Zugang",
-                prepCalcButton: "PrepCalc Starten →",
-                dripCalcTitle: "Tropfgeschwindigkeitsrechner",
-                dripCalcSubtitle: "IV-Infusionsraten-Tool",
-                dripCalcBadge: "Demnächst",
-                dripCalcDesc: "Berechnen Sie mL/h-Pumpenraten für gewichtsbasierte und festdosierte Infusionen. Perfekt für Intensivpflege-Medikamente.",
-                ctaTitle: "Bereit Zu Starten?",
-                ctaSubtitle: "Schließen Sie sich medizinischen Fachkräften an, die Pahtia Labs-Tools für präzise IV-Zubereitungen verwenden",
-                ctaButton: "PrepCalc Jetzt Testen",
-                aboutTitle: "Die Bedeutung Hinter Pahtia",
-                aboutPara1: "Pahtia Labs leitet seinen Namen vom aztekischen Wort pahtia ab, das \"heilen\" bedeutet, eine Grundlage, die unseren Zweck leitet. Unser Fokus liegt darauf, Pharmazie-Software zu entwickeln, die Sicherheit erhöht, Genauigkeit verbessert und die klinische Arbeit stärkt, die täglich die Patientenversorgung unterstützt.",
-                aboutPara2: "Pahtia Labs verbindet traditionelle pharmazeutische Expertise mit modernster Technologie. Unsere Tools werden von erfahrenen IV-Pharmazie-Fachleuten entwickelt, die die kritische Bedeutung von Genauigkeit im Gesundheitswesen verstehen.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Für den Realen Einsatz Entwickelt",
-                aboutStat2: "∞",
-                aboutStat2Label: "Engagement für Präzision",
-                footerDisclaimer: "Nicht-klinische Demo-Tools — Überprüfen Sie immer Berechnungen vor klinischer Verwendung",
-                footerCopyright: "© 2025 Pahtia Labs — Alle Rechte vorbehalten"
-            },
-            ja: {
-                navAbout: "について",
-                navTools: "ツール",
-                navGetStarted: "始める",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "医療専門家のためにIV薬剤師が開発した精密薬局ツール",
-                heroExplore: "ツールを探索",
-                heroLearn: "詳細を見る",
-                toolsTitle: "私たちのツール",
-                toolsSubtitle: "IV薬局ワークフロー用に設計されたプロフェッショナルグレードの計算機",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "IV投与量計算機",
-                prepCalcBadge: "利用可能",
-                prepCalcDesc: "IV調製用の正確な投与量と希釈を計算します。投与量から容量への変換と濃度ベースの希釈のためのデュアルモード計算を特徴とします。",
-                prepCalcFeature1: "投与量から容量への計算",
-                prepCalcFeature2: "希釈計算",
-                prepCalcFeature3: "複数の単位変換（mg、mcg、g、mmol、mEq）",
-                prepCalcFeature4: "リアルタイム検証とエラーチェック",
-                prepCalcFeature5: "無料無制限アクセス",
-                prepCalcButton: "PrepCalcを起動 →",
-                dripCalcTitle: "点滴速度計算機",
-                dripCalcSubtitle: "IV注入速度ツール",
-                dripCalcBadge: "近日公開",
-                dripCalcDesc: "体重ベースおよび固定用量注入のためのmL/hrポンプ速度を計算します。集中治療薬に最適です。",
-                ctaTitle: "始める準備はできましたか？",
-                ctaSubtitle: "正確なIV調製のためにPahtia Labsツールを使用している医療専門家に参加してください",
-                ctaButton: "今すぐPrepCalcを試す",
-                aboutTitle: "Pahtiaの背後にある意味",
-                aboutPara1: "Pahtia Labsは、「癒す」を意味するアステカ語のpahtiaに由来し、私たちの目的を導く基盤となっています。私たちの焦点は、安全性を高め、正確性を向上させ、毎日患者ケアをサポートする臨床業務を強化する薬局ソフトウェアを作成することです。",
-                aboutPara2: "Pahtia Labsは、伝統的な薬局の専門知識と最先端の技術を橋渡しします。私たちのツールは、医療における正確性の重要性を理解する経験豊富なIV薬局専門家によって構築されています。",
-                aboutStat1: "100%",
-                aboutStat1Label: "実際の使用のために構築",
-                aboutStat2: "∞",
-                aboutStat2Label: "精度へのコミットメント",
-                footerDisclaimer: "非臨床デモツール — 臨床使用前に常に計算を確認してください",
-                footerCopyright: "© 2025 Pahtia Labs — 無断転載を禁じます"
-            },
-            it: {
-                navAbout: "Chi Siamo",
-                navTools: "Strumenti",
-                navGetStarted: "Inizia",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Strumenti farmaceutici di precisione creati da tecnici di farmacia IV per professionisti sanitari",
-                heroExplore: "Esplora Strumenti",
-                heroLearn: "Scopri di Più",
-                toolsTitle: "I Nostri Strumenti",
-                toolsSubtitle: "Calcolatori di livello professionale progettati per i flussi di lavoro della farmacia IV",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "Calcolatore di Dosaggio IV",
-                prepCalcBadge: "Disponibile Ora",
-                prepCalcDesc: "Calcola volumi di dosaggio precisi e diluizioni per preparazioni IV. Include calcolo in modalità doppia per conversioni dose-volume e diluizioni basate sulla concentrazione.",
-                prepCalcFeature1: "Calcoli dose-volume",
-                prepCalcFeature2: "Calcoli di diluizione",
-                prepCalcFeature3: "Conversioni di unità multiple (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Validazione in tempo reale e controllo errori",
-                prepCalcFeature5: "Accesso Illimitato Gratuito",
-                prepCalcButton: "Avvia PrepCalc →",
-                dripCalcTitle: "Calcolatore Velocità di Infusione",
-                dripCalcSubtitle: "Strumento Velocità Infusione IV",
-                dripCalcBadge: "Prossimamente",
-                dripCalcDesc: "Calcola velocità pompa in mL/h per infusioni basate sul peso e dosi fisse. Perfetto per farmaci di terapia intensiva.",
-                ctaTitle: "Pronto per Iniziare?",
-                ctaSubtitle: "Unisciti ai professionisti sanitari che utilizzano gli strumenti Pahtia Labs per preparazioni IV precise",
-                ctaButton: "Prova PrepCalc Ora",
-                aboutTitle: "Il Significato di Pahtia",
-                aboutPara1: "Pahtia Labs prende il nome dalla parola azteca pahtia, che significa \"guarire\", una base che guida il nostro scopo. Il nostro obiettivo è creare software farmaceutico che migliori la sicurezza, aumenti la precisione e rafforzi il lavoro clinico che supporta l'assistenza ai pazienti ogni giorno.",
-                aboutPara2: "Pahtia Labs unisce l'esperienza farmaceutica tradizionale con la tecnologia all'avanguardia. I nostri strumenti sono creati da professionisti esperti di farmacia IV che comprendono l'importanza critica della precisione nell'assistenza sanitaria.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Costruito per l'Uso nel Mondo Reale",
-                aboutStat2: "∞",
-                aboutStat2Label: "Impegno per la Precisione",
-                footerDisclaimer: "Strumenti demo non clinici — Verifica sempre i calcoli prima dell'uso clinico",
-                footerCopyright: "© 2025 Pahtia Labs — Tutti i diritti riservati"
-            },
-            zh: {
-                navAbout: "关于",
-                navTools: "工具",
-                navGetStarted: "开始使用",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "由静脉药房技术人员为医疗专业人员打造的精密药房工具",
-                heroExplore: "探索工具",
-                heroLearn: "了解更多",
-                toolsTitle: "我们的工具",
-                toolsSubtitle: "为静脉药房工作流程设计的专业级计算器",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "静脉给药计算器",
-                prepCalcBadge: "现已推出",
-                prepCalcDesc: "计算静脉制剂的精确剂量体积和稀释。具有双模式计算功能，用于剂量到体积转换和基于浓度的稀释。",
-                prepCalcFeature1: "剂量到体积计算",
-                prepCalcFeature2: "稀释计算",
-                prepCalcFeature3: "多单位转换（毫克、微克、克、毫摩尔、毫当量）",
-                prepCalcFeature4: "实时验证和错误检查",
-                prepCalcFeature5: "免费无限访问",
-                prepCalcButton: "启动PrepCalc →",
-                dripCalcTitle: "滴速计算器",
-                dripCalcSubtitle: "静脉输注速率工具",
-                dripCalcBadge: "即将推出",
-                dripCalcDesc: "计算基于体重和固定剂量输注的毫升/小时泵速。非常适合重症监护药物。",
-                ctaTitle: "准备开始了吗？",
-                ctaSubtitle: "加入使用Pahtia Labs工具进行精确静脉制剂的医疗专业人员",
-                ctaButton: "立即试用PrepCalc",
-                aboutTitle: "Pahtia背后的意义",
-                aboutPara1: "Pahtia Labs的名字来源于阿兹特克语pahtia，意思是\"治愈\"，这是指导我们目标的基础。我们的重点是创建提高安全性、增强准确性并加强每天支持患者护理的临床工作的药房软件。",
-                aboutPara2: "Pahtia Labs将传统药房专业知识与尖端技术相结合。我们的工具由经验丰富的静脉药房专业人员构建，他们了解医疗保健中准确性的关键重要性。",
-                aboutStat1: "100%",
-                aboutStat1Label: "为实际使用而构建",
-                aboutStat2: "∞",
-                aboutStat2Label: "对精确度的承诺",
-                footerDisclaimer: "非临床演示工具 — 在临床使用前请务必验证计算",
-                footerCopyright: "© 2025 Pahtia Labs — 保留所有权利"
-            },
-            ko: {
-                navAbout: "소개",
-                navTools: "도구",
-                navGetStarted: "시작하기",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "의료 전문가를 위해 IV 약사가 개발한 정밀 약국 도구",
-                heroExplore: "도구 탐색",
-                heroLearn: "자세히 알아보기",
-                toolsTitle: "우리의 도구",
-                toolsSubtitle: "IV 약국 워크플로우를 위해 설계된 전문가급 계산기",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "IV 투여량 계산기",
-                prepCalcBadge: "현재 이용 가능",
-                prepCalcDesc: "IV 준비를 위한 정확한 투여량 및 희석을 계산합니다. 용량-부피 변환 및 농도 기반 희석을 위한 이중 모드 계산을 제공합니다.",
-                prepCalcFeature1: "용량-부피 계산",
-                prepCalcFeature2: "희석 계산",
-                prepCalcFeature3: "다중 단위 변환 (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "실시간 검증 및 오류 확인",
-                prepCalcFeature5: "무료 무제한 액세스",
-                prepCalcButton: "PrepCalc 실행 →",
-                dripCalcTitle: "점적 속도 계산기",
-                dripCalcSubtitle: "IV 주입 속도 도구",
-                dripCalcBadge: "출시 예정",
-                dripCalcDesc: "체중 기반 및 고정 용량 주입을 위한 mL/시간 펌프 속도를 계산합니다. 중환자 치료 약물에 완벽합니다.",
-                ctaTitle: "시작할 준비가 되셨나요?",
-                ctaSubtitle: "정확한 IV 준비를 위해 Pahtia Labs 도구를 사용하는 의료 전문가들과 함께하세요",
-                ctaButton: "지금 PrepCalc 사용해보기",
-                aboutTitle: "Pahtia의 의미",
-                aboutPara1: "Pahtia Labs는 \"치유하다\"를 의미하는 아즈텍어 pahtia에서 이름을 따왔으며, 이는 우리의 목적을 안내하는 기초입니다. 우리의 초점은 안전성을 높이고, 정확성을 향상시키며, 매일 환자 치료를 지원하는 임상 작업을 강화하는 약국 소프트웨어를 만드는 것입니다.",
-                aboutPara2: "Pahtia Labs는 전통적인 약국 전문 지식과 최첨단 기술을 연결합니다. 우리의 도구는 의료에서 정확성의 중요성을 이해하는 숙련된 IV 약국 전문가들이 만듭니다.",
-                aboutStat1: "100%",
-                aboutStat1Label: "실제 사용을 위해 구축됨",
-                aboutStat2: "∞",
-                aboutStat2Label: "정확성에 대한 헌신",
-                footerDisclaimer: "비임상 데모 도구 — 임상 사용 전에 항상 계산을 확인하십시오",
-                footerCopyright: "© 2025 Pahtia Labs — 판권 소유"
-            },
-            pl: {
-                navAbout: "O Nas",
-                navTools: "Narzędzia",
-                navGetStarted: "Rozpocznij",
-                heroTitle: "Pahtia Labs",
-                heroSubtitle: "Precyzyjne narzędzia farmaceutyczne stworzone przez techników farmacji IV dla profesjonalistów medycznych",
-                heroExplore: "Poznaj Narzędzia",
-                heroLearn: "Dowiedz Się Więcej",
-                toolsTitle: "Nasze Narzędzia",
-                toolsSubtitle: "Kalkulatory profesjonalnej klasy zaprojektowane dla przepływów pracy w farmacji IV",
-                prepCalcTitle: "PrepCalc",
-                prepCalcSubtitle: "Kalkulator Dawkowania IV",
-                prepCalcBadge: "Dostępny Teraz",
-                prepCalcDesc: "Oblicz precyzyjne objętości dawkowania i rozcieńczenia dla preparatów IV. Zawiera kalkulację w trybie podwójnym dla konwersji dawka-objętość i rozcieńczeń opartych na stężeniu.",
-                prepCalcFeature1: "Obliczenia dawka-objętość",
-                prepCalcFeature2: "Obliczenia rozcieńczenia",
-                prepCalcFeature3: "Konwersje wielu jednostek (mg, mcg, g, mmol, mEq)",
-                prepCalcFeature4: "Walidacja w czasie rzeczywistym i sprawdzanie błędów",
-                prepCalcFeature5: "Darmowy Nieograniczony Dostęp",
-                prepCalcButton: "Uruchom PrepCalc →",
-                dripCalcTitle: "Kalkulator Prędkości Wlewu",
-                dripCalcSubtitle: "Narzędzie Prędkości Infuzji IV",
-                dripCalcBadge: "Wkrótce",
-                dripCalcDesc: "Oblicz prędkość pompy w mL/h dla infuzji opartych na wadze i dawkach stałych. Idealne dla leków intensywnej opieki.",
-                ctaTitle: "Gotowy Aby Rozpocząć?",
-                ctaSubtitle: "Dołącz do profesjonalistów medycznych korzystających z narzędzi Pahtia Labs do precyzyjnych preparatów IV",
-                ctaButton: "Wypróbuj PrepCalc Teraz",
-                aboutTitle: "Znaczenie Pahtia",
-                aboutPara1: "Pahtia Labs bierze swoją nazwę od azteckiego słowa pahtia, które oznacza \"leczyć\", podstawy, która kieruje naszym celem. Naszym celem jest tworzenie oprogramowania farmaceutycznego, które podnosi bezpieczeństwo, zwiększa dokładność i wzmacnia pracę kliniczną wspierającą opiekę nad pacjentem każdego dnia.",
-                aboutPara2: "Pahtia Labs łączy tradycyjną wiedzę farmaceutyczną z najnowocześniejszą technologią. Nasze narzędzia są tworzone przez doświadczonych profesjonalistów farmacji IV, którzy rozumieją krytyczne znaczenie dokładności w opiece zdrowotnej.",
-                aboutStat1: "100%",
-                aboutStat1Label: "Zbudowane dla Rzeczywistego Użytku",
-                aboutStat2: "∞",
-                aboutStat2Label: "Zaangażowanie w Precyzję",
-                footerDisclaimer: "Narzędzia demo niekliniczne — Zawsze weryfikuj obliczenia przed użyciem klinicznym",
-                footerCopyright: "© 2025 Pahtia Labs — Wszelkie prawa zastrzeżone"
-            }
-        };
-
-        let currentLang = localStorage.getItem('pathia-language') || 'en';
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('pathia-language', lang);
-            updateContent();
-            document.getElementById('lang-selector').value = lang;
-        }
-
-        function updateContent() {
-            const t = translations[currentLang];
-            
-            // Navigation
-            document.getElementById('nav-about').textContent = t.navAbout;
-            document.getElementById('nav-tools').textContent = t.navTools;
-            document.getElementById('nav-get-started').textContent = t.navGetStarted;
-            
-            // Hero
-            document.getElementById('hero-title').textContent = t.heroTitle;
-            document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
-            document.getElementById('hero-explore').textContent = t.heroExplore;
-            document.getElementById('hero-learn').textContent = t.heroLearn;
-            
-            // Tools Section
-            document.getElementById('tools-title').textContent = t.toolsTitle;
-            document.getElementById('tools-subtitle').textContent = t.toolsSubtitle;
-            document.getElementById('prepcalc-title').textContent = t.prepCalcTitle;
-            document.getElementById('prepcalc-subtitle').textContent = t.prepCalcSubtitle;
-            document.getElementById('prepcalc-badge').textContent = t.prepCalcBadge;
-            document.getElementById('prepcalc-desc').textContent = t.prepCalcDesc;
-            document.getElementById('prepcalc-feature1').textContent = t.prepCalcFeature1;
-            document.getElementById('prepcalc-feature2').textContent = t.prepCalcFeature2;
-            document.getElementById('prepcalc-feature3').textContent = t.prepCalcFeature3;
-            document.getElementById('prepcalc-feature4').textContent = t.prepCalcFeature4;
-            document.getElementById('prepcalc-feature5').textContent = t.prepCalcFeature5;
-            document.getElementById('prepcalc-button').textContent = t.prepCalcButton;
-            
-            document.getElementById('dripcalc-title').textContent = t.dripCalcTitle;
-            document.getElementById('dripcalc-subtitle').textContent = t.dripCalcSubtitle;
-            document.getElementById('dripcalc-badge').textContent = t.dripCalcBadge;
-            document.getElementById('dripcalc-desc').textContent = t.dripCalcDesc;
-            
-            // CTA Section
-            document.getElementById('cta-title').textContent = t.ctaTitle;
-            document.getElementById('cta-subtitle').textContent = t.ctaSubtitle;
-            document.getElementById('cta-button').textContent = t.ctaButton;
-            
-            // About Section
-            document.getElementById('about-title').textContent = t.aboutTitle;
-            document.getElementById('about-para1').innerHTML = t.aboutPara1;
-            document.getElementById('about-para2').textContent = t.aboutPara2;
-            document.getElementById('about-stat1').textContent = t.aboutStat1;
-            document.getElementById('about-stat1-label').textContent = t.aboutStat1Label;
-            document.getElementById('about-stat2').textContent = t.aboutStat2;
-            document.getElementById('about-stat2-label').textContent = t.aboutStat2Label;
-            
-            // Footer
-            document.getElementById('footer-disclaimer').textContent = t.footerDisclaimer;
-            document.getElementById('footer-copyright').textContent = t.footerCopyright;
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('lang-selector').value = currentLang;
-            updateContent();
-        });
-    </script>
     
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800 z-50">
@@ -516,7 +59,7 @@
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#about" id="nav-about" class="text-gray-300 hover:text-indigo-400 transition">About</a>
                     <a href="#tools" id="nav-tools" class="text-gray-300 hover:text-indigo-400 transition">Tools</a>
-                    <select id="lang-selector" onchange="setLanguage(this.value)" class="bg-gray-800 border border-gray-600 text-white px-3 py-1.5 rounded-lg text-sm">
+                    <select id="lang-selector" class="bg-gray-800 border border-gray-600 text-white px-3 py-1.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400">
                         <option value="en">English</option>
                         <option value="es">Español</option>
                         <option value="fr">Français</option>
@@ -528,7 +71,7 @@
                         <option value="ko">한국어</option>
                         <option value="pl">Polski</option>
                     </select>
-                    <a href="#tools" id="nav-get-started" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg transition">Get Started</a>
+                    <a href="#tools" id="nav-get-started" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-lg transition" data-track="nav-get-started">Get Started</a>
                 </div>
             </div>
         </div>
@@ -570,7 +113,7 @@
             </p>
               
             <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-3">
-                <a href="#tools" id="hero-explore" class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
+                <a href="#tools" id="hero-explore" class="bg-indigo-600 hover:bg-indigo-700 px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50 btn-primary" data-track="hero-explore">
                     Explore Tools
                 </a>
                 <a href="#about" id="hero-learn" class="border border-indigo-500 hover:bg-indigo-500/10 px-8 py-4 rounded-xl text-lg font-medium transition">
@@ -594,7 +137,7 @@
             
             <div class="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
                 <!-- PrepCalc Card -->
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-indigo-500/50 rounded-2xl p-8 hover:border-indigo-400 transition shadow-xl">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-indigo-500/50 rounded-2xl p-8 hover:border-indigo-400 transition shadow-xl tool-card">
                     <div class="flex items-start justify-between mb-6">
                         <div>
                             <h3 id="prepcalc-title" class="text-3xl font-bold text-indigo-300 mb-2">PrepCalc</h3>
@@ -611,38 +154,38 @@
                     
                     <div class="space-y-3 mb-8">
                         <div class="flex items-center gap-3 text-gray-300">
-                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature1">Dose-to-volume calculations</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
-                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature2">Dilution calculations</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
-                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature3">Multiple unit conversions (mg, mcg, g, mmol, mEq)</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
-                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature4">Real-time validation and error checking</span>
                         </div>
                         <div class="flex items-center gap-3 text-gray-300">
-                            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             <span id="prepcalc-feature5">Free Unlimited Access</span>
                         </div>
                     </div>
                     
-                    <a href="https://app.pahtialabs.com" id="prepcalc-button" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
+                    <a href="https://app.pahtialabs.com" id="prepcalc-button" class="inline-block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50 btn-primary" data-track="launch-prepcalc">
                         Launch PrepCalc →
                     </a>
                 </div>
@@ -676,7 +219,7 @@
             <p id="cta-subtitle" class="text-xl text-gray-300 mb-10">
                 Join healthcare professionals using Pahtia Labs tools for precise IV preparations
             </p>
-            <a href="#tools" id="cta-button" class="inline-block bg-indigo-600 hover:bg-indigo-700 px-10 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50">
+            <a href="#tools" id="cta-button" class="inline-block bg-indigo-600 hover:bg-indigo-700 px-10 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50 btn-primary" data-track="cta-try-prepcalc">
                 Try PrepCalc Now
             </a>
         </div>
@@ -749,5 +292,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
