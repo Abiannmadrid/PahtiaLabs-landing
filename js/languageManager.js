@@ -11,7 +11,7 @@ class LanguageManager {
      * Load saved language from localStorage or default to 'en'
      */
     loadLanguage() {
-        return localStorage.getItem('pathia-language') || 'en';
+        return localStorage.getItem('pahtia-language') || 'en';
     }
 
     /**
@@ -23,7 +23,7 @@ class LanguageManager {
             lang = 'en';
         }
         this.currentLang = lang;
-        localStorage.setItem('pathia-language', lang);
+        localStorage.setItem('pahtia-language', lang);
         this.updateContent();
         this.updateSelector();
     }
