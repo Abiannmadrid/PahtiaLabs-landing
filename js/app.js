@@ -1,5 +1,8 @@
 // app.js - Main application initialization
 import { languageManager } from './languageManager.js';
+document.addEventListener('DOMContentLoaded', () => {
+    languageManager.init();
+    });
 
 class App {
     constructor() {
