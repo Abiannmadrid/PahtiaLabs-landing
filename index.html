@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pahtia Labs - Precision pharmacy tools built by IV pharmacy technicians for healthcare professionals">
-    <meta name="keywords" content="pharmacy calculator, IV dosing, drug dilution, pharmacy tools, healthcare">
+    <meta name="keywords" content="pharmacy calculator, IV dosing, drug dilution, pharmacy tools, healthcare, drip rate calculator, IV infusion">
     
     <title>Pahtia Labs - Precision Pharmacy Tools</title>
     
@@ -135,7 +135,7 @@
                 Professional-grade calculators designed for IV pharmacy workflows
             </p>
             
-            <div class="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <!-- PrepCalc Card -->
                 <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-indigo-500/50 rounded-2xl p-8 hover:border-indigo-400 transition shadow-xl tool-card">
                     <div class="flex items-start justify-between mb-6">
@@ -181,7 +181,7 @@
                             <svg class="w-5 h-5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span id="prepcalc-feature5">Free Unlimited Access</span>
+                            <span id="prepcalc-feature5">Step-by-step calculation display</span>
                         </div>
                     </div>
                     
@@ -190,21 +190,58 @@
                     </a>
                 </div>
 
-                <!-- Coming Soon Card -->
-                <div class="bg-gray-800/30 border border-gray-700 rounded-2xl p-8 opacity-60">
+                <!-- Drip Rate Calculator Card - NOW AVAILABLE -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-purple-500/50 rounded-2xl p-8 hover:border-purple-400 transition shadow-xl tool-card">
                     <div class="flex items-start justify-between mb-6">
                         <div>
-                            <h3 id="dripcalc-title" class="text-3xl font-bold text-gray-400 mb-2">Drip Rate Calculator</h3>
-                            <p id="dripcalc-subtitle" class="text-gray-500">IV Infusion Rate Tool</p>
+                            <h3 id="dripcalc-title" class="text-3xl font-bold text-purple-300 mb-2">IV Drip Rate</h3>
+                            <p id="dripcalc-subtitle" class="text-gray-400">Infusion Rate Calculator</p>
                         </div>
-                        <div id="dripcalc-badge" class="bg-gray-700 px-4 py-2 rounded-lg text-sm font-semibold text-gray-400">
-                            Coming Soon
+                        <div id="dripcalc-badge" class="bg-purple-600 px-4 py-2 rounded-lg text-sm font-semibold">
+                            Available Now
                         </div>
                     </div>
                     
-                    <p id="dripcalc-desc" class="text-gray-500 mb-6 text-lg">
-                        Calculate mL/hr pump rates for weight-based and fixed-dose infusions. Perfect for critical care medications.
+                    <p id="dripcalc-desc" class="text-gray-300 mb-6 text-lg leading-relaxed">
+                        Calculate IV drip rates with precision. Convert between drops per minute and mL/hr for gravity-fed infusions with step-by-step teaching mode.
                     </p>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span id="dripcalc-feature1">Drops per minute calculation</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span id="dripcalc-feature2">Flow rate verification (mL/hr)</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span id="dripcalc-feature3">Common drop factors (10, 15, 20, 60)</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span id="dripcalc-feature4">Educational step-by-step mode</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span id="dripcalc-feature5">Multi-language support</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://app.pahtialabs.com" id="dripcalc-button" class="inline-block w-full bg-purple-600 hover:bg-purple-700 text-white text-center px-8 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-purple-500/50 btn-primary" data-track="launch-dripcalc">
+                        Launch Drip Rate Calculator →
+                    </a>
                 </div>
             </div>
         </div>
@@ -220,7 +257,7 @@
                 Join healthcare professionals using Pahtia Labs tools for precise IV preparations
             </p>
             <a href="#tools" id="cta-button" class="inline-block bg-indigo-600 hover:bg-indigo-700 px-10 py-4 rounded-xl text-lg font-medium transition shadow-lg hover:shadow-indigo-500/50 btn-primary" data-track="cta-try-prepcalc">
-                Try PrepCalc Now
+                Try Our Tools Now
             </a>
         </div>
     </section>
