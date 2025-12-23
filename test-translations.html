@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Test</title>
+</head>
+<body>
+    <h1>Translation Test</h1>
+    <p id="test-output">Loading...</p>
+    
+    <script type="module">
+        try {
+            const response = await fetch('./js/translations.js');
+            const text = await response.text();
+            console.log('✅ File loaded successfully');
+            console.log('File size:', text.length, 'bytes');
+            
+            // Try to import it
+            const { translations } = await import('./js/translations.js');
+            console.log('✅ Import successful');
+            console.log('Available languages:', Object.keys(translations));
+            
+            document.getElementById('test-output').innerHTML = `
+                <strong style="color: green;">✅ SUCCESS!</strong><br>
+                Available languages: ${Object.keys(translations).join(', ')}
+            `;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            document.getElementById('test-output').innerHTML = `
+                <strong style="color: red;">❌ ERROR:</strong><br>
+                ${error.message}
+            `;
+        }
+    </script>
+</body>
+</html>
