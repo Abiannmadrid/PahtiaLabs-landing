@@ -1,39 +1,31 @@
-// languageManager.js - Handle language switching and updates (WITH DEBUGGING)
+// languageManager.js - Handle language switching with mobile support
 import { translations } from './translations.js';
 
 class LanguageManager {
     constructor() {
-        console.log('🔧 LanguageManager: Constructor called');
         this.currentLang = this.loadLanguage();
         this.translations = translations;
-        console.log('✅ LanguageManager: Translations loaded:', Object.keys(this.translations));
-        console.log('✅ LanguageManager: Current language:', this.currentLang);
     }
 
     /**
      * Load saved language from localStorage or default to 'en'
      */
     loadLanguage() {
-        const savedLang = localStorage.getItem('pahtia-language') || 'en';
-        console.log('📂 LanguageManager: Loaded language from storage:', savedLang);
-        return savedLang;
+        return localStorage.getItem('pahtia-language') || 'en';
     }
 
     /**
      * Set and save a new language
      */
     setLanguage(lang) {
-        console.log('🌐 LanguageManager: Setting language to:', lang);
         if (!this.translations[lang]) {
-            console.warn(`⚠️ Language '${lang}' not found, defaulting to 'en'`);
+            console.warn(`Language '${lang}' not found, defaulting to 'en'`);
             lang = 'en';
         }
         this.currentLang = lang;
         localStorage.setItem('pahtia-language', lang);
-        console.log('💾 LanguageManager: Language saved to storage');
         this.updateContent();
         this.updateSelector();
-        console.log('✅ LanguageManager: Content updated');
     }
 
     /**
@@ -55,8 +47,6 @@ class LanguageManager {
      */
     updateContent() {
         const t = this.getTranslations();
-        console.log('📝 LanguageManager: Updating content...');
-        let updatedCount = 0;
         
         // Update all elements with IDs that match translation keys
         Object.keys(t).forEach(key => {
@@ -69,26 +59,24 @@ class LanguageManager {
                 } else {
                     element.textContent = t[key];
                 }
-                updatedCount++;
             }
         });
-        
-        console.log(`✅ LanguageManager: Updated ${updatedCount} elements`);
-        if (updatedCount === 0) {
-            console.warn('⚠️ LanguageManager: No elements were updated! Check if IDs match translation keys.');
-        }
     }
 
     /**
-     * Update language selector dropdown
+     * Update both desktop and mobile language selectors
      */
     updateSelector() {
-        const selector = document.getElementById('lang-selector');
-        if (selector) {
-            selector.value = this.currentLang;
-            console.log('✅ LanguageManager: Selector updated to:', this.currentLang);
-        } else {
-            console.warn('⚠️ LanguageManager: Language selector not found!');
+        // Update desktop selector
+        const desktopSelector = document.getElementById('lang-selector');
+        if (desktopSelector) {
+            desktopSelector.value = this.currentLang;
+        }
+        
+        // Update mobile selector
+        const mobileSelector = document.getElementById('lang-selector-mobile');
+        if (mobileSelector) {
+            mobileSelector.value = this.currentLang;
         }
     }
 
@@ -103,29 +91,26 @@ class LanguageManager {
      * Initialize language manager on page load
      */
     init() {
-        console.log('🚀 LanguageManager: Initializing...');
         this.updateContent();
         this.updateSelector();
         
-        // Setup language selector
-        const selector = document.getElementById('lang-selector');
-        if (selector) {
-            selector.addEventListener('change', (e) => {
-                console.log('👆 LanguageManager: User changed language to:', e.target.value);
+        // Setup desktop language selector
+        const desktopSelector = document.getElementById('lang-selector');
+        if (desktopSelector) {
+            desktopSelector.addEventListener('change', (e) => {
                 this.setLanguage(e.target.value);
             });
-            console.log('✅ LanguageManager: Event listener attached to selector');
-        } else {
-            console.error('❌ LanguageManager: lang-selector element not found in DOM!');
         }
         
-        console.log('✅ LanguageManager: Initialization complete');
+        // Setup mobile language selector
+        const mobileSelector = document.getElementById('lang-selector-mobile');
+        if (mobileSelector) {
+            mobileSelector.addEventListener('change', (e) => {
+                this.setLanguage(e.target.value);
+            });
+        }
     }
 }
 
 // Export singleton instance
 export const languageManager = new LanguageManager();
-
-// Make it accessible in console for debugging
-window.languageManager = languageManager;
-console.log('🌍 LanguageManager: Now accessible via window.languageManager');
