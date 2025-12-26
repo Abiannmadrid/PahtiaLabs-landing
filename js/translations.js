@@ -34,13 +34,13 @@ export const translations = {
         ctaSubtitle: "Join healthcare professionals using Pahtia Labs tools for precise IV preparations",
         ctaButton: "Try Our Tools Now",
         aboutTitle: "The Meaning Behind Pahtia",
-        aboutPara1: 'Pahtia Labs takes its name from the Aztec word pahtia, meaning "to heal," a foundation that guides our purpose. Our focus is to create pharmacy software that elevates safety, enchances accuracy, and strenghthens the clinical work that supports patient care every day.',
+        aboutPara1: 'Pahtia Labs takes its name from the Aztec word pahtia, meaning "to heal," a foundation that guides our purpose. Our focus is to create pharmacy software that elevates safety, enhances accuracy, and strengthens the clinical work that supports patient care every day.',
         aboutPara2: "Pahtia Labs bridges traditional pharmacy expertise with cutting-edge technology. Our tools are built by experienced IV pharmacy professionals who understand the critical importance of accuracy in healthcare.",
         aboutStat1: "100%",
         aboutStat1Label: "Built for Real-World Use",
         aboutStat2: "∞",
         aboutStat2Label: "Commitment to Precision",
-        footerDisclaimer: "Non-clinical demo tools — Always verify calculations before clinical use",
+        footerDisclaimer: "Educational demo environment — Always verify calculations before clinical use",
         footerCopyright: "© 2025 Pahtia Labs — All rights reserved"
     },
     es: {
