@@ -851,8 +851,10 @@
                 </div>
             </div>
             
-                <a href="/resources/assets/pdf/Pharmacy_Conversion_Chart_EN.pdf" download class="download-btn" id="download-btn">
-
+                <a href="/assets/pdf/Pharmacy_Conversion_Chart_EN.pdf"
+                    download
+                    class="download-btn"
+                    id="download-btn">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -936,16 +938,15 @@
         <p>© 2025 Pahtia Labs — All rights reserved</p>
     </footer>
 
-    <script>
-        // Language selector functionality
-        const languageSelect = document.getElementById('language-select');
-        const downloadBtn = document.getElementById('download-btn');
-        
-        languageSelect.addEventListener('change', function() {
-            const selectedLang = this.value;
-            const newHref = `assets/pdf/Pharmacy_Conversion_Chart_${selectedLang}.pdf`;
-            downloadBtn.setAttribute('href', newHref);
-        });
-    </script>
+<script>
+    const languageSelect = document.getElementById('language-select');
+    const downloadBtn = document.getElementById('download-btn');
+
+    languageSelect.addEventListener('change', function () {
+        const selectedLang = this.value;
+        downloadBtn.href = `/assets/pdf/Pharmacy_Conversion_Chart_${selectedLang}.pdf`;
+    });
+</script>
+
 </body>
 </html>
