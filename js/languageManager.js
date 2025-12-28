@@ -79,6 +79,12 @@ class LanguageManager {
             mobileSelector.value = this.currentLang;
         }
     }
+    updateDownloadLink(lang) {
+        const btn = document.getElementById('download-btn');
+        if (!btn) return;
+
+        btn.href = `/assets/pdf/Pharmacy_Conversion_Chart_${lang}.pdf`;
+    }
 
     /**
      * Convert camelCase to kebab-case for ID matching
@@ -93,6 +99,8 @@ class LanguageManager {
     init() {
         this.updateContent();
         this.updateSelector();
+        this.updateDownloadLink(this.currentLanguage);
+
         
         // Setup desktop language selector
         const desktopSelector = document.getElementById('lang-selector');
