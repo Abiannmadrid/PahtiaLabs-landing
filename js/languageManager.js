@@ -84,7 +84,9 @@ class LanguageManager {
         if (!btn) return;
 
         btn.href = `/assets/pdf/Pharmacy_Conversion_Chart_${lang}.pdf`;
+        btn.href = `/assets/pdf/Sig_Codes_Reference_${lang}.pdf`;
     }
+
 
     /**
      * Convert camelCase to kebab-case for ID matching
