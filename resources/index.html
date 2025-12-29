@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Pharmacy Resources | Pahtia Labs</title>
+    <meta name="description" content="Free downloadable pharmacy resources including conversion charts and sig codes reference guides for healthcare professionals.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVWVYF7Y1L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WVWVYF7Y1L');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --accent: #a78bfa;
+            --bg: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-light: #334155;
+            --text: #f1f5f9;
+            --text-light: #94a3b8;
+            --border: #334155;
+            --white: #ffffff;
+            --card-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            line-height: 1.1;
+        }
+
+        .logo-icon {
+            flex-shrink: 0;
+        }
+
+        .logo-text-container {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-text {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .logo-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.625rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-light);
+        }
+
+        .back-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #4f46e5 50%, #7c3aed 100%);
+            color: white;
+            padding: 6rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.3) 0%, transparent 50%);
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            animation: fadeInUp 0.6s ease-out;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.625rem 1.5rem;
+            border-radius: 3rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease-out 0.05s both;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Resources Grid */
+        .resources-section {
+            max-width: 1200px;
+            margin: -4rem auto 6rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border-radius: 2rem;
+            padding: 3rem;
+            box-shadow: 
+                0 0 0 1px rgba(99, 102, 241, 0.1),
+                0 20px 60px -12px rgba(0, 0, 0, 0.5),
+                0 35px 100px -20px rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .resource-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .resource-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 
+                0 0 0 1px rgba(99, 102, 241, 0.2),
+                0 30px 80px -12px rgba(0, 0, 0, 0.6),
+                0 45px 120px -20px rgba(99, 102, 241, 0.3);
+        }
+
+        .resource-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #8b5cf6);
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            box-shadow: 
+                0 10px 30px rgba(79, 70, 229, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            position: relative;
+        }
+
+        .resource-icon::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+            pointer-events: none;
+        }
+
+        .resource-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .resource-card h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .resource-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.0625rem;
+            line-height: 1.7;
+        }
+
+        .language-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            width: 100%;
+            padding: 1.125rem 2rem;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 1rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 4px 12px rgba(79, 70, 229, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .resource-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 24px rgba(79, 70, 229, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+        }
+
+        .resource-link:hover::before {
+            opacity: 1;
+        }
+
+        .resource-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e293b 0%, #4f46e5 50%, #7c3aed 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            margin-top: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(167, 139, 250, 0.3) 0%, transparent 50%);
+        }
+
+        .cta-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn-primary {
+            padding: 1.125rem 2.5rem;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 1rem;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn-secondary {
+            padding: 1.125rem 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            text-decoration: none;
+            border-radius: 1rem;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+
+        .cta-btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9375rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.625rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.25rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            .hero p {
+                font-size: 1.125rem;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-card {
+                padding: 2.5rem 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2.25rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .resource-card h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <defs>
+                            <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#818cf8" />
+                                <stop offset="100%" style="stop-color:#a78bfa" />
+                            </linearGradient>
+                        </defs>
+                        <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" 
+                                 fill="none" stroke="url(#hexGrad)" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="12" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.7"/>
+                        <circle cx="50" cy="50" r="3" fill="#3b82f6"/>
+                        <circle cx="50" cy="15" r="3" fill="#c4b5fd"/>
+                        <circle cx="80" cy="32.5" r="3" fill="#c4b5fd"/>
+                        <circle cx="80" cy="67.5" r="3" fill="#c4b5fd"/>
+                        <circle cx="50" cy="85" r="3" fill="#c4b5fd"/>
+                        <circle cx="20" cy="67.5" r="3" fill="#c4b5fd"/>
+                        <circle cx="20" cy="32.5" r="3" fill="#c4b5fd"/>
+                    </svg>
+                </div>
+                <div class="logo-text-container">
+                    <span class="logo-text">Pahtia</span>
+                    <span class="logo-subtitle">LABS</span>
+                </div>
+            </a>
+            <a href="https://www.pahtialabs.com" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">📚 FREE RESOURCES</div>
+            <h1>Pharmacy Resources</h1>
+            <p>Free downloadable reference guides for healthcare professionals.</p>
+        </div>
+    </section>
+
+    <!-- Resources Grid -->
+    <section class="resources-section">
+        <div class="resources-grid">
+            <!-- Conversion Chart -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h2>Pharmacy Conversion Chart</h2>
+                <p>Essential metric, household, and apothecary conversions. Includes weight, volume, temperature, and concentration expressions.</p>
+                <div class="language-badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                    Available in 5 languages
+                </div>
+                <a href="/resources/conversion-chart" class="resource-link">
+                    View Resource
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Sig Codes -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h2>Sig Codes Reference</h2>
+                <p>Comprehensive prescription abbreviation guide. Includes frequency, timing, routes of administration, and dosage forms with Latin origins.</p>
+                <div class="language-badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                    Available in 5 languages
+                </div>
+                <a href="/resources/sig-codes" class="resource-link">
+                    View Resource
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Need More Tools?</h2>
+        <p>Check out our precision pharmacy calculators built by pharmacy professionals.</p>
+        <div class="cta-buttons">
+            <a href="https://app.pahtialabs.com" class="cta-btn-primary">Try Our Calculators</a>
+            <a href="/" class="cta-btn-secondary">About Pahtia Labs</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="footerHexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#818cf8" />
+                        <stop offset="100%" style="stop-color:#a78bfa" />
+                    </linearGradient>
+                </defs>
+                <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" 
+                         fill="none" stroke="url(#footerHexGrad)" stroke-width="3"/>
+                <circle cx="50" cy="50" r="8" fill="none" stroke="#60a5fa" stroke-width="2"/>
+                <circle cx="50" cy="50" r="3" fill="#3b82f6"/>
+            </svg>
+            <span class="text-lg font-light text-indigo-200">Pahtia</span>
+            <span class="text-lg font-semibold text-indigo-400 ml-1">LABS</span>
+        </div>
+        <p><strong>Educational Reference Only</strong> — Always verify information in clinical practice</p>
+        <p>© 2025 Pahtia Labs — All rights reserved</p>
+    </footer>
+
+    <script>
+        // Track resource card clicks
+        document.querySelectorAll('.resource-link').forEach(link => {
+            link.addEventListener('click', function() {
+                const resourceName = this.closest('.resource-card').querySelector('h2').textContent;
+                gtag('event', 'resource_click', {
+                    'event_category': 'Resources Hub',
+                    'event_label': resourceName,
+                    'value': 1
+                });
+            });
+        });
+    </script>
+</body>
+</html>
